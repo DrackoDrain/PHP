@@ -26,7 +26,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="/LearnPHP">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
@@ -54,6 +54,20 @@
   </div>
 </nav>
 
+<?php
+ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+  $email = $_POST['email'];
+  $password = $_POST['pass'];
+  echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Success!</strong> Your email '.$email.' and password '.$password.' has been successfully saved. 
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>';
+ }
+
+ // Submit to database 
+ 
+?>
+
 
         <!-- FORMS -->
 
@@ -61,23 +75,22 @@
 
 <div class="container mt-3">
 <h1>Please enter your Email and Password </h1>
-<form>
+<form action ="/LearnPHP/13_GetPost.php" method="post">
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <label for="email" class="form-label">Email address</label>
+    <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
+    <label for="pass" class="form-label">Password</label>
+    <input type="password" class="form-control" id="pass" name="pass">
   </div>
-  <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
+  
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 </div>
+
+ghjkkkk
 
 
 
@@ -93,3 +106,4 @@
     -->
   </body>
 </html>
+ <!-- its on  -->
