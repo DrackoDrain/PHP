@@ -6,7 +6,6 @@ $arr = array(" Apple ", " Banana ", "Orange ", "Strawberry ","Mango ", " Guava")
 //     echo $arr[$i];
 //     echo "<br>";
 // }
-    // sdf
 
 foreach($arr as $value ){
     echo "$value <br>";
